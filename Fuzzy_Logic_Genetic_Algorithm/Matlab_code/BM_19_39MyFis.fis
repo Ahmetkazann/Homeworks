@@ -1,0 +1,68 @@
+[System]
+Name='MyFis3fis'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=25
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='input1'
+Range=[-5 5]
+NumMFs=5
+MF1='cok_kücük':'trimf',[-7.5 -5 -2.5]
+MF2='kücük':'trimf',[-4.97354497354497 -2.47354497354497 0.0264550264550261]
+MF3='orta':'trimf',[-2.5 -2.776e-17 2.5]
+MF4='büyük':'trimf',[0 2.5 5]
+MF5='cok_büyük':'trimf',[2.5 5 7.5]
+
+[Input2]
+Name='input2'
+Range=[-5 5]
+NumMFs=5
+MF1='cok_kücük':'trimf',[-7.5 -5 -2.5]
+MF2='kücük':'trimf',[-5 -2.5 0]
+MF3='orta':'trimf',[-2.5 -2.776e-17 2.5]
+MF4='büyük':'trimf',[0 2.5 5]
+MF5='cok_büyük':'trimf',[2.5 5 7.5]
+
+[Output1]
+Name='output1'
+Range=[-79 200]
+NumMFs=4
+MF1='cok_kücük(koyu_mavi)':'trimf',[-172 -79 14]
+MF2='kücük(mavi)':'trimf',[-79 14 107]
+MF3='orta(sarı)':'trimf',[14 107 200]
+MF4='büyük(kırmızı)':'trimf',[107 200 293]
+
+[Rules]
+1 1, 4 (1) : 1
+1 2, 2 (1) : 1
+1 3, 3 (1) : 1
+1 4, 2 (1) : 1
+1 5, 4 (1) : 1
+2 1, 2 (1) : 1
+2 2, 1 (1) : 1
+2 3, 1 (1) : 1
+2 4, 1 (1) : 1
+2 5, 2 (1) : 1
+3 1, 3 (1) : 1
+3 2, 1 (1) : 1
+3 3, 1 (1) : 1
+3 4, 1 (1) : 1
+3 5, 3 (1) : 1
+4 1, 2 (1) : 1
+4 2, 1 (1) : 1
+4 3, 1 (1) : 1
+4 4, 1 (1) : 1
+4 5, 2 (1) : 1
+5 1, 4 (1) : 1
+5 2, 2 (1) : 1
+5 3, 3 (1) : 1
+5 4, 2 (1) : 1
+5 5, 4 (1) : 1
